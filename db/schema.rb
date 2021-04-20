@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_20_041027) do
+ActiveRecord::Schema.define(version: 2021_04_20_094212) do
+
+  create_table "favorite_games", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "game_id"
+    t.boolean "favorite"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "games", force: :cascade do |t|
     t.string "title"
@@ -29,14 +37,6 @@ ActiveRecord::Schema.define(version: 2021_04_20_041027) do
     t.integer "game_id"
     t.float "rating"
     t.text "content"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "user_games", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "game_id"
-    t.boolean "favorite"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
