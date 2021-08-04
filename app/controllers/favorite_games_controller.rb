@@ -1,5 +1,5 @@
 class FavoriteGamesController < ApplicationController
-    favorite Favorite
+    
     def index 
         favorite_games = FavoriteGame.all
         render json: favorite_games
@@ -13,7 +13,7 @@ class FavoriteGamesController < ApplicationController
     def create
         favorite_game = FavoriteGame.create(favorite_game_params)
         
-        render json: Favorite_game
+        render json: favorite_game
     end
 
     def update
@@ -31,7 +31,7 @@ class FavoriteGamesController < ApplicationController
     private
 
     def favorite_game_params
-        params.permit(:user_id, :game_id, :favorite)
+        params.permit(:user_id, :game_id)
     end
 
 end

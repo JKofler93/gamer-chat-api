@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   get '/games/:id' => 'games#show'
   post "/login", to: "auth#login"
   post "/register", to: "auth#register"
-  post "/favorite_games" => "favorite_games#create"
+  post "/favorite_games/:id" => "favorite_games#create"
   get "/profile", to: "users#profile"
 end

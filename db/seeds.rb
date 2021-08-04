@@ -9,10 +9,13 @@
 
 Game.destroy_all
 User.destroy_all
+FavoriteGame.destroy_all
 
 
 
-User.create(username: "nowayjoek", password: "123456abc")
+User.create(
+    username: "nowayjoek", 
+    password: "123")
 
 Game.create(
     title: "Apex Legends", 
@@ -24,7 +27,7 @@ Game.create(
     video: "https://www.youtube.com/watch?v=oQtHENM_GZU")
 
 Game.create(
-    title: "Call of Duty: Black Ops Cold War",
+    title: "Black Ops Cold War",
     genre: "First-Person Shooter", 
     esrb_rating: "Mature", 
     description: "Call of Duty: Black Ops Cold War is a 2020 first-person shooter video game developed by Treyarch and Raven Software and published by Activision. It features a seasonal content system similar to Call of Duty: Modern Warfare (2019), which includes a battle pass as well as free maps and weapons added every season.", 
@@ -68,23 +71,6 @@ Game.create(
     banner: "https://www.nintendo.com//content/dam/noa/en_US/games/switch/d/dead-by-daylight-switch/dead-by-daylight-switch-hero.jpg", 
     video: "https://www.youtube.com/watch?v=JGhIXLO3ul8")
 
-Game.create(
-    title: "The Elder Scrolls: Skyrim", 
-    genre: "Action Role-Playing", 
-    esrb_rating: "Mature", 
-    description: "", 
-    image: "", 
-    banner: "", 
-    video: "https://www.youtube.com/watch?v=JSRtYpNRoN0")
-
-Game.create(
-    title: "Fallout 4", 
-    genre: "Action Role-Playing", 
-    esrb_rating: "Mature", 
-    description: "The Elder Scrolls V: Skyrim is an action role-playing game, playable from either a first or third-person perspective. The player may freely roam over the land of Skyrim which is an open world environment consisting of wilderness expanses, dungeons, caves, cities, towns, fortresses, and villages.", 
-    image: "https://hb.imgix.net/12d1d9ac840e649ca0d749b0e5d8b403d310b10e.jpeg?auto=compress,format&fit=crop&h=353&w=616&s=ea7b42b6e2b1535675ccca94ba8c0b95", 
-    banner: "https://www.nintendo.com//content/dam/noa/en_US/games/switch/t/the-elder-scrolls-v-skyrim-switch/the-elder-scrolls-v-skyrim-switch-hero.jpg", 
-    video: "https://www.youtube.com/watch?v=XW7Of3g2JME")
 
 Game.create(
     title: "No Man's Sky", 
@@ -123,7 +109,7 @@ Game.create(
     video: "https://www.youtube.com/watch?v=UGRHLmBNO_w")
 
 Game.create(
-    title: "Burnout Paradise Remastered", 
+    title: "Burnout Paradise", 
     genre: "Racing", 
     esrb_rating: "Everyone", 
     description: "Burnout Paradise Remastered is the ultimate driving playground to play with friends or on-the-go. Burnout Paradise Remastered delivers the complete original game and 8 main DLC packs, including Big Surf Island, Burnout Bikes, and the Cops and Robbers pack.", 
@@ -166,15 +152,6 @@ Game.create(
     image: "https://cdn.2kgames.com/web/nba.2k.com/images/2k21/nba2k21_fob_LE_NG_1.jpg", 
     banner: "https://compass-ssl.xbox.com/assets/00/0d/000d862c-294b-4ded-bef9-27b1a8f1bd6e.jpg?n=NBA-2K21_GLP-Page-Hero-1084_Mamba-Forever_1920x1080.jpg", 
     video: "https://www.youtube.com/watch?v=Ib5ygUYjHZI")
-
-Game.create(
-    title: "Madden NFL 21", 
-    genre: "Sports", 
-    esrb_rating: "Everyone", 
-    description: "Madden NFL 21 is an American football video game based on the National Football League (NFL), developed by EA Tiburon and published by Electronic Arts. It is an installment of the long-running Madden NFL series.", 
-    image: "https://www.justpushstart.com/wp-content/uploads/2021/03/madden-nfl-21-74-portrait.png", 
-    banner: "https://images.daznservices.com/di/library/sporting_news/85/89/madden-21-ftr_33hclvany1lq19lhe6oz94uf8.png?t=-1071958638&quality=100", 
-    video: "https://www.youtube.com/watch?v=kfEUX1fVy5A")
 
 Game.create(
     title: "NHL 21", 
